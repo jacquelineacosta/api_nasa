@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buscador de imágenes de la NASA</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+    <div class="text-center container">
+      <div class="row py-lg-3">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Buscador de imágenes de la NASA</h1>
+          <input type="text" id="searchQuery" class="form-control" name="buscar" placeholder="Ej.: JUPITER" required>
+<div class="invalid-feedback">Este campo es obligatorio.</div>
+          <button class="btn btn-primary my-2" onclick="searchImages()" id="btnBuscar">Buscar imágenes</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="contenedor" class="row">
+      </div>
+    </div>
+
+    <div class="modal fade" id="descriptionModal" tabindex="-1" aria-labelledby="descriptionModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="descriptionModalLabel">Descripción</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modal-description"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loader" style="display: none;">Cargando...</div>
+
+  </main>
+  
+  
+
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">
+          Jovenes a Programar</a>, y consume datos de <a href="https://api.nasa.gov/" target="_blank">
+          api.nasa.gov</a></p>
+      <p class="mb-1">Generado con fines estrictamente educativos.</p>
+    </div>
+  </footer>
+  
+<!-- Tu script personalizado -->
+  <script src="js/space.js"></script>
+ <!-- Incluye jQuery -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <!-- Incluye Popper.js -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+ <!-- Incluye Bootstrap JS -->
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  
+</body>
+
+</html>
